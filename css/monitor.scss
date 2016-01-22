@@ -1,0 +1,186 @@
+$totalHeight:700px;
+$totalWidth:1400px;
+$partWidth:$totalWidth/2 - 35px;
+$buttonColr:#337ab6;
+
+body{
+
+  #total{
+    width:1370px;
+    height:700px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .title{
+    width:1340px;
+    height:100px;
+    margin-left:10px;
+    background-color: #114c84;
+    span{
+      font-size:60px;
+      color:white;
+      line-height: 100px;
+      margin-left:10px;
+    }
+  }
+
+  .leftDiv{
+    height: $totalHeight;
+    width: $partWidth;
+    border: #000000 1px solid;
+    float:left;
+    margin:10px 5px 0px 10px;
+
+    .leftTop{
+      height:127px;
+      margin:5px 0px 5px 0px;
+      border-bottom: solid #747474 2px;
+      .leftTopDownLeftVolume{
+        float:left;
+        height:125px;
+        width:125px;
+      }
+      .leftTopUp{
+        height:50px;
+        h3{margin:10px 26px 10px 6px;float:left;}
+        span{margin:9px 5px;float:left;border: #000000 1px solid;text-align: center;
+          label{margin:6px 5px 6px 5px;}
+        }
+      }
+      .leftTopDown{
+        .leftTopDownLeft {
+          float:left;
+          width:300px;
+          height:70px;
+          img {
+            float: left;
+            width: 50px;
+            margin: 10px 20px 10px 1px;
+          }
+        }
+        .leftTopDownRight {
+          float:left;
+          width:220px;
+          height:70px;
+          span {
+            margin: 5px 5px;
+          }
+          input, button {
+            float: left;
+            margin: 16px 3px 1px;
+          }
+        }
+      }
+    }
+    .LeftMiddle {
+      height:520px;
+    }
+    .leftList{
+      height:126px;
+      margin:0px 0px 0px 0px;
+      border-bottom: solid #747474 2px;
+      div.img{
+        width:110px;height:110px;margin:7px;float:left;
+        p{color:white; margin:38px 13px;}
+      }
+      .leftListUp{
+        float:left;
+        margin-top:10px;
+        margin-bottom:10px;
+        border: #bfc7be 1px solid;
+        span {  margin: 9px 20px;  float: left;  border: #969696 1px solid;  text-align: center;
+          label{margin:5px; font-size:16px;}
+        }
+        p{float:left;margin-top: 16px;margin-right:100px;font-size:16px;}
+        img{width:35px;float:left;margin-top:8px;}
+      }
+      .leftListDown{
+        width:470px;
+        height:35px;
+        overflow: hidden;
+        .volume{
+          position: relative;
+          width:470px;
+          height:33px;
+          border:blue 1px solid;
+          border-radius: 15px;
+          .volumeSize{
+            background-color: $buttonColr;height: 31px; width:100px;
+            border-bottom-left-radius: 13px;
+            border-top-left-radius: 13px;
+          }
+          p{
+            position: absolute;
+            left:160px;
+            top:7px;
+          }
+        }
+      }
+      .brickListTr{
+        border-bottom: solid #747474 2px;
+      }
+      input{width:50px; height:115px;margin-right:5px;}
+    }
+    .leftBottom{
+      text-align:center;
+      margin:6px;
+      a{
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .rightDiv{
+    height: $totalHeight;
+    width: $partWidth;
+    border: #000000 1px solid;
+    float:left;
+    margin:10px 10px 10px 7px;
+    .rightDivTop{
+      float:left;
+      h3{margin:10px 6px 10px 6px;float:left;}
+      .input{
+        float:left;
+        margin-top:10px;
+        margin-left:200px;
+        input{
+          height:30px;
+        }
+        input:first-child{
+          width:200px;
+        }
+        input:last-child{
+          width:100px;
+        }
+      }
+    }
+    table{
+      margin:20px 20px 0 20px;
+    }
+    th,td{
+      width:$partWidth/4;
+      padding:13px 0 13px 0;
+      height: 55px;
+    }
+    table, th, td
+    {
+      border: 2px solid #747474;
+      text-align:center;
+      font-size:16px;
+    }
+    .rightDivBottom{
+      margin:10px;
+      text-align:center;  // ����
+      a{ margin-left: 15px;}
+    }
+    thead{
+      background-color: #3f6991;
+    }
+    th{
+      color:white;
+    }
+  }
+}
+.filename{
+  cursor:pointer;
+}

@@ -1,0 +1,107 @@
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="./css/monitor.css"/>
+    <link rel="stylesheet" href="./css/bootstrap.css"/>
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <script src="./js/lib/jquery.js"></script>
+    <script src="./js/about_echarts.js"></script>
+    <script src="./js/monitor.js"></script>
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+  </head>
+  <body>
+    <div id="total">
+      <div class="title"><span>服务节点状态监控平台</span></div>
+      <div class="leftDiv">
+        <div class="leftTop">
+          <div class="leftTopDownLeftVolume"></div>
+          <div class="leftTopUp">
+            <h3>状态总览</h3><span>
+              <label id="totalSize">容量(GB):54/48000</label></span><span>
+              <label id="fileNum">文件数:21</label></span><span>
+              <label id="brickNum">节点数:6(6成功，0失败)</label></span>
+          </div>
+          <div class="leftTopDown">
+            <div class="leftTopDownLeft">
+              <!--img(src="./img/ok-pc.png")-->
+            </div>
+            <div class="leftTopDownRight">
+              <button id="brickPrevTotal" type="button" aria-label="Left Align" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-arrow-left"></span></button>
+              <button id="brickNextTotal" type="button" aria-label="Left Align" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-arrow-right"></span></button>
+              <div class="btn-group">
+                <button id="addBrick" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary dropdown-toggle">添加节点<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">192.168.11.20</a></li>
+                  <li><a href="#">192.168.11.30</a></li>
+                  <li><a href="#">192.168.11.40</a></li>
+                  <li><a href="#">192.168.11.50</a></li>
+                  <li><a href="#">192.168.11.60</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="LeftMiddle">
+          <div class="leftList">
+            <table id="brickList"></table>
+            <!--tr.brickListTr-->
+            <!--    td-->
+            <!--        div.img(style="background-image:url('./img/none-pc.png');")-->
+            <!--            p 192.168.2.113-->
+            <!--    td(style="width:510;")-->
+            <!--        div.leftListUp-->
+            <!--            span-->
+            <!--                label 节点名称-->
+            <!--            p 虚拟节点1-->
+            <!--            span-->
+            <!--                label 节点状态-->
+            <!--            img(src="./img/ok.png")-->
+            <!--        div.leftListDown-->
+            <!--            div.volume-->
+            <!--                div.volumeSize-->
+            <!--                p 已用量/总容量: 540G/4800G-->
+            <!--    td-->
+            <!--        input(type="button" value="删除" class="btn btn-primary")-->
+          </div>
+        </div>
+        <div class="leftBottom"><a id="brickPrevList" href="#" role="button" class="btn btn-default btn-sm active"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> 上一页</a><a id="brickNextList" href="#" role="button" class="btn btn-default btn-sm active">
+            下一页
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></div>
+      </div>
+      <div class="rightDiv">
+        <div class="rightDivTop">
+          <h3>文件信息</h3>
+          <div class="input">
+            <input id="queryFile" type="text" placeholder="请输入文件序号"/>
+            <input type="button" value="查询" onclick="aaa()" class="btn btn-primary"/>
+          </div>
+        </div>
+        <table id="fileTable">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>名称</th>
+              <th>类型</th>
+              <th>大小</th>
+            </tr>
+          </thead>
+          <tbody id="fileList">
+            <!--tr-->
+            <!--    th(scope="row")-->
+            <!--        p 1-->
+            <!--    td-->
+            <!--        p 视频1-->
+            <!--    td-->
+            <!--        p MP4-->
+            <!--    td-->
+            <!--        p 600-->
+          </tbody>
+        </table>
+        <div class="rightDivBottom"><a id="tablePrev" href="#" role="button" class="btn btn-default btn-sm active"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> 上一页</a><a id="tableNext" href="#" role="button" class="btn btn-default btn-sm active">
+            下一页
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></div>
+      </div>
+    </div>
+  </body>
+</html>
